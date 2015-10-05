@@ -8,7 +8,6 @@ var ink = module.exports = {
     }
   },
   window: null,
-  $in: null,
   command: '',
   refresh: function () {
     var name;
@@ -28,7 +27,6 @@ var ink = module.exports = {
   },
   register: function (window, $in) {
     ink.window = window;
-    ink.$in = $in;
     $in.on('keyup change', function () {
       var command = window.$(this).val();
       if (command !== ink.command) {
