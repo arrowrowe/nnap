@@ -23,10 +23,10 @@ app.on('window-all-closed', function() {
 // initialization and is ready to create browser windows.
 app.on('ready', function() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({width: nwPackage.width, height: nwPackage.height});
 
   // and load the index.html of the app.
-  mainWindow.loadUrl('file://' + __dirname + '/common/index.html');
+  mainWindow.loadUrl('file://' + __dirname + '/' + nwPackage.main);
 
   // Open the DevTools.
   if (nwPackage.window.toolbar) {
