@@ -4,11 +4,16 @@
     <title>Hello World!</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using <a data-show-hide="#versions" href="javascript:;">...</a><ul id="versions" style="display:none"></ul>
+    <div>
+      We are using <a data-show-hide="#versions" href="javascript:;">...</a><ul id="versions" style="display:none"></ul>
+    </div>
+    <div>
+      <input type="text" id="in">
+    </div>
     <script type="text/javascript" src="script/versions.js"></script>
     <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script>(typeof module==='undefined')||($=jQuery=module.exports,module.exports={})</script>
     <script type="text/javascript" src="script/show-hide.js"></script>
+    <script>require('./script/ink').register(window, $('#in'))</script>
   </body>
 </html>
