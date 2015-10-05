@@ -1,0 +1,11 @@
+{
+  "name": "nw-demo",
+  "private": true,
+  "version": "0.0.1",
+  "main": "common/index.html",
+  "window": {
+    "toolbar": false,
+    "height": 600,
+    "width": 800
+  }
+}
