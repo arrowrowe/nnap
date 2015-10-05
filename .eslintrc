@@ -8,8 +8,7 @@
   },
   "env": {
     "node": true,
-    "browser": true,
-    "jquery": true
+    "browser": true
   },
   "extends": "eslint:recommended"
 }
