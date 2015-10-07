@@ -10,6 +10,7 @@ var ink = module.exports = {
   window: null,
   command: '',
   refresh: function () {
+    this.window.$('#out').empty();
     var name;
     if (/^[a-zA-Z][a-zA-Z0-9] /.test(ink.command)) {
       name = ink.command.substr(0, 2);
@@ -24,6 +25,9 @@ var ink = module.exports = {
         pkg.run.call(ink);
       }
     }
+  },
+  add: function (content) {
+    this.window.$('#out').append('<li>' + content + '</li>');
   },
   register: function (window, $in) {
     ink.window = window;
